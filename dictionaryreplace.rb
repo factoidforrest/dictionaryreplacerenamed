@@ -1,14 +1,15 @@
 #!/usr/bin/env ruby
-dictionary = {'  ' => '	'}
+dictionary = {'  ' => '\t'}
 
 print "File name: "
 file_name = gets
+debug
 
-text = File.read (file_name)
+#text = File.read(/home/forrest/dictionaryreplace/testdata.txt)
 
-dictionary.each do |pair|
-	new_text = text.gsub(pair)
-end
-File.new( file_name + "-edited.txt","w") do |newcontents|
-	newcontents << new_text
-end
+#Dictionary.each do |plain, code|
+#new_text = text.gsub(plain, code)
+#end
+#File.open( file_name + "-edited.txt","w") do |newcontents|
+#	newcontents << new_text
+#end
