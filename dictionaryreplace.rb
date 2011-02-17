@@ -3,13 +3,14 @@ dictionary = {'  ' => '\t'}
 
 print "File name: "
 file_name = gets
-debug
+file_name_chomped = file_name.chomp
+puts file_name_chomped
 
-#text = File.read(/home/forrest/dictionaryreplace/testdata.txt)
+text = File.read("/home/forrest/dictionaryreplace/" + file_name_chomped)
 
-#Dictionary.each do |plain, code|
-#new_text = text.gsub(plain, code)
-#end
-#File.open( file_name + "-edited.txt","w") do |newcontents|
-#	newcontents << new_text
-#end
+dictionary.each do |plain, code|
+	@new_text = text.gsub(plain, code)
+end
+File.open(file_name_chomped + "-edited.txt","w") do |newcontents|
+	newcontents.puts(@new_text)
+end

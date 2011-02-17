@@ -1,2 +1,2 @@
 this is a double space: "  "
-this is a tab:          "	"
+this is a tab: "	"
